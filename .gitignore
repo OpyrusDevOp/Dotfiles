@@ -1,4 +1,3 @@
-*
 
 !.gitignore
 !README.md
@@ -9,5 +8,7 @@
 !eww/
 !fuzzel/
 !zellij/
-!fish/
-!kitty/
+!fish/*
+!kitty/*
+
+*
