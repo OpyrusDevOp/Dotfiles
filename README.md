@@ -15,7 +15,7 @@
 - **File manager** : *Nautilus*
 - **Terminal** : *Kitty*
 - **Terminal Session** : *Zellij*
-- **Music Player** : [*Harmonia*][https://github.com/OpyrusDevOp/Harmonia.git]
+- **Music Player** : [*Harmonia*](https://github.com/OpyrusDevOp/Harmonia.git)
 - **AUR** : *Yay*
 - *Git*
 - *Discord*
