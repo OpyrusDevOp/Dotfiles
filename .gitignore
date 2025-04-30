@@ -1,14 +1,14 @@
+*
 
 !.gitignore
 !README.md
 !Install.sh
 
-!waybar/
-!hypr/
-!eww/
-!fuzzel/
-!zellij/
-!fish/*
-!kitty/*
+!waybar
+!hypr
+!eww
+!fuzzel
+!zellij
+!fish
+!kitty
 
-*
