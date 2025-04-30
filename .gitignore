@@ -4,11 +4,17 @@
 !README.md
 !Install.sh
 
-!waybar
-!hypr
-!eww
-!fuzzel
-!zellij
-!fish
-!kitty
-
+!waybar/
+!waybar/**
+!hypr/
+!hypr/**
+!eww/
+!eww/**
+!fuzzel/
+!fuzzel/**
+!zellij/
+!zellij/**
+!fish/
+!fish/**
+!kitty/
+!kitty/**
