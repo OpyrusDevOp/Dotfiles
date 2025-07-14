@@ -6,17 +6,26 @@ function zj -a session
     zellij attach $session
 end
 
+function start_ssh_agent
+    for line in (keychain --eval ~/.ssh/id_ed25519)
+        if string match -qr '^([A-Z_]+)=' -- $line
+            set var (string split '=' (string split ';' $line)[1])[1]
+            set val (string split '=' (string split ';' $line)[1])[2]
+            set -gx $var $val
+        end
+    end
+end
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    keychain --eval /home/opyrusdev/.ssh/id_ed25519 | source
+    # keychain --eval /home/opyrusdev/.ssh/id_ed25519 | source
+
+    start_ssh_agent
     nvm use default
+    clear
+    fastfetch
 end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /home/opyrusdev/.nvm/versions/node/v22.14.0/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish ]; and . /home/opyrusdev/.nvm/versions/node/v22.14.0/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish
-

@@ -1,16 +1,61 @@
-* {
-    all: unset;
-}
-// Include colors
-@import 'css/material';
-// Include lib
-@import 'css/lib';
+$tokyonight-bg: #1a1b26;
+$tokyonight-blue: #7aa2f7;
+$tokyonight-cyan: #7dcfff;
+$tokyonight-fg: #c0caf5;
 
-// Windows
-@import 'css/bar';
-@import 'css/cheatsheet';
-@import 'css/notificationspopup';
-@import 'css/powermenu';
-@import 'css/powerview';
-@import 'css/sidebar';
-@import 'css/visualizer';
+.powermenu {
+  background: rgba(26, 27, 38, 0.7);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.powermenu-panel {
+  background: $tokyonight-bg;
+  border-radius: 1.5em;
+  // box-shadow: 0 0 20px 2px $tokyonight-blue;
+  // padding: 2em 4em;
+  min-width: 30em;
+  min-height: 6em;
+  border: 2px solid $tokyonight-blue;
+}
+
+//
+.powermenu-btn {
+  background: transparent;
+  border: none;
+  border-radius: 1em;
+  transition: background 0.2s, box-shadow 0.2s;
+  padding: 1em 2em;
+  margin: 0 1em;
+
+  &:hover {
+    background: $tokyonight-blue;
+    box-shadow: 0 0 10px 2px $tokyonight-cyan;
+
+    .powermenu-icon {
+      color: $tokyonight-bg;
+    }
+  }
+}
+
+////
+// .powermenu-icon:hover {
+//   color: $tokyonight-bg;
+// }
+//
+// //
+// .powermenu-panel:hover {
+//   background: $tokyonight-blue;
+// }
+
+//
+.powermenu-icon {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+  font-size: 2.5em;
+  color: $tokyonight-blue;
+  transition: color 0.2s;
+}
+
+//
+// .testbox {
+//   background: red;
+// }

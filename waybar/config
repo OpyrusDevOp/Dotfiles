@@ -5,7 +5,7 @@
   "margin-top": 6,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "network", "tray"],
+  "modules-right": ["battery", "pulseaudio", "network", "tray", "custom/powermenu"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -41,15 +41,15 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
+    "format-muted" : "󰖁",  
     "format-icons": {
-      "default": ["󰖀", "󰕾", "󰕿", "󰖁"]
+      "default": [ "󰕿", "󰖀", "󰕾", ]
     },
-    "tooltip": false
+    "tooltip": false,
+    "on-click" : "pavucontrol &"
   },
 
   "network": {
-    "format-wifi": "󰖩  {essid}",
-    "format-ethernet": "󰈀  Wired",
     "format-disconnected": "󰖪  Disconnected",
     "tooltip": true,
     "on-click" : "nm-connection-editor &"
@@ -58,6 +58,10 @@
   "tray": {
     "icon-size": 16,
     "spacing": 8
-  }
+  },
+  "custom/powermenu":{
+      "format" : "󰐥",
+      "on-click" : "eww open powermenu"
+    }
 }
 

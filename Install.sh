@@ -3,6 +3,11 @@ Installation() {
   sudo pacman -S $2
 }
 
+Installation_Yay() {
+  Installing_Message $1
+  yay -S $2
+}
+
 Install_Dotnet() {
   Installing_Message Dotnet
   curl -L https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
@@ -34,11 +39,15 @@ Installation "Browser" firefox
 
 Installation "AppLauncher" fuzzel
 
+Installation "Widget Manager" eww
+
 Installation "Dock" waybar
 
 Installation "Wallpaper daemon" hyprpaper
 
-Installation "File Manager" nautilus
+Installation "Screenshot App" hyprshot
+
+Installation "File Manager" yazi
 
 Installation "Terminal Session Manager" zellij
 
@@ -46,21 +55,24 @@ Installation "Discord" discord
 
 Installation "Obsidian" obsidian
 
-Installation "Libre Office" libreoffice
+Installation "Office suite" libreoffice
 
 Installation "Unzip" unzip
 
 Installation "Keychain" keychain
 
+Installation "Bluetooth Control" "bluez bluez-utils"
+
 Installation "Brightness Control" brightnessctl
+
+Installation "Audio Control" libpulse
 
 Install_Dotnet
 
 Installing_Message Bun
 curl -fsSL https://bun.sh/install | bash
 
-Installing_Message "Nvm"
-yay -S nvm
+Installation_Yay "Nvm" nvm
 
 echo "#### Configuration ####"
 mkdir -p ~/{Documents, Musics, Pictures, Projects/{Softwares, Games}, Videos}

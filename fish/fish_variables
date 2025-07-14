@@ -1,12 +1,14 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOTNET_ROOT:/home/opyrusdev/\x2edotnet
 SETUVAR --export GEMINI_API_KEY:AIzaSyDXpEaLyLnu8C3_WM5pVwgHih6muIQ8oWA
 SETUVAR --export SSH_AGENT_PID:1585
-SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXwExCij/agent\x2e1584
-SETUVAR SSH_KEYS_TO_AUTOLOAD:/home/opyrusdev/\x2essh/id_ed25519
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXLr1pgj/agent\x2e1538
+SETUVAR SSH_KEYS_TO_AUTOLOAD:/home/opyrusdev/\x2essh/id_ed25519\x1e/home/opyrusdev/\x2essh/id_ed25519
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
-SETUVAR _fisher_plugins:edc/bass
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:edc/bass\x1ejorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
@@ -36,4 +38,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/opyrusdev/\x2edotnet\x1e/home/opyrusdev/development/flutter/bin
+SETUVAR fish_user_paths:/home/opyrusdev/\x2edotnet\x1e/home/opyrusdev/development/flutter/bin\x1e/home/opyrusdev/Programs/omnisharp\x1e/home/opyrusdev/Android/Sdk/emulator
