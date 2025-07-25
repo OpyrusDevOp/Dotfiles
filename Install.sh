@@ -41,7 +41,9 @@ Installation "AppLauncher" fuzzel
 
 Installation "Widget Manager" eww
 
-Installation "Dock" waybar
+# Installation "Dock" waybar
+
+Installation_Yay "Dock" ags-hyprpanel-git
 
 Installation "Wallpaper daemon" hyprpaper
 
