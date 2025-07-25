@@ -67,7 +67,7 @@ Installation "Bluetooth Control" "bluez bluez-utils"
 
 Installation "Brightness Control" brightnessctl
 
-Installation "Audio Control" libpulse
+Installation "Audio Control" wireplumber
 
 Install_Dotnet
 
