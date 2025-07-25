@@ -400,5 +400,8 @@
   "theme.bar.buttons.modules.cpuTemp.border": "#fab387",
   "theme.osd.border.color": "#8ff0a4",
   "theme.bar.menus.monochrome": false,
-  "theme.bar.transparent": true
+  "theme.bar.transparent": true,
+  "theme.font.size": "1rem",
+  "theme.font.weight": 600,
+  "theme.bar.menus.opacity": 100
 }
