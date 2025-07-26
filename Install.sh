@@ -1,11 +1,13 @@
+#!/bin/bash
+
 Installation() {
   Installing_Message $1
-  sudo pacman -S $2
+  sudo pacman -S --noconfirm $2
 }
 
 Installation_Yay() {
   Installing_Message $1
-  yay -S $2
+  yay -S --noconfirm $2
 }
 
 Install_Dotnet() {
@@ -19,7 +21,7 @@ Installing_Message() {
   echo "Installing $1 ..."
 }
 
-echo "####  App Installion  ####"
+echo "####  App Installation  ####"
 
 Installation "git" git
 
@@ -27,7 +29,12 @@ echo "Install Neovim Config ..."
 git clone https://github.com/OpyrusDevOp/Neovim-Config.git ~/.config/nvim
 
 echo "Installing Yay ..."
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --noconfirm --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+rm -rf yay
 
 Installation "Terminal" kitty
 
@@ -77,6 +84,6 @@ curl -fsSL https://bun.sh/install | bash
 Installation_Yay "Nvm" nvm
 
 echo "#### Configuration ####"
-mkdir -p ~/{Documents, Musics, Pictures, Projects/{Softwares, Games}, Videos}
-mkdir -p /usr/local/share/fonts/{otf,ttf}
-unzip ./JetBrainsMono.zip -d /usr/local/share/fonts/ttf/
+mkdir -p ~/{Documents,Musics,Pictures,Projects/{Softwares,Games},Videos}
+sudo mkdir -p /usr/local/share/fonts/{otf,ttf}
+sudo unzip ./JetBrainsMono.zip -d /usr/local/share/fonts/ttf/
