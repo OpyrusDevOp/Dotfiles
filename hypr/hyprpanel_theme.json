@@ -1,8 +1,4 @@
 {
-  "bar.customModules.storage.paths": [
-    "/"
-  ],
-  "wallpaper.enable": false,
   "theme.bar.menus.background": "#1a1b26",
   "theme.bar.background": "#1a1b26",
   "theme.bar.buttons.media.icon": "#7aa2f7",
@@ -399,60 +395,6 @@
   "theme.bar.buttons.modules.cpuTemp.text": "#272a3d",
   "theme.bar.buttons.modules.cpuTemp.border": "#2ac3de",
   "theme.osd.border.color": "#7aa2f7",
-  "theme.bar.menus.monochrome": false,
-  "theme.bar.transparent": false,
-  "theme.font.size": "1rem",
-  "theme.font.weight": 600,
-  "theme.bar.menus.opacity": 100,
-  "bar.layouts": {
-    "0": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "network",
-        "systray",
-        "clock",
-        "notifications"
-      ]
-    },
-    "1": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "clock",
-        "notifications"
-      ]
-    },
-    "2": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "clock",
-        "notifications"
-      ]
-    }
-  },
   "theme.bar.buttons.icon_active": "#00bfff",
   "theme.bar.buttons.icon_inactive": "#1f2533",
   "theme.bar.buttons.notifications.text": "#0b0d13",
@@ -482,23 +424,5 @@
   "theme.bar.buttons.modules.dashboard.text": "#00bfff",
   "theme.bar.buttons.modules.dashboard.background": "#111318",
   "theme.bar.menus.menu.notifications.text": "#b0dfff",
-  "theme.bar.menus.menu.volume.slider.primary": "#00bfff",
-  "theme.bar.enableShadow": false,
-  "scalingPriority": "hyprland",
-  "theme.notification.scaling": 55,
-  "theme.bar.menus.enableShadow": true,
-  "menus.transitionTime": 75,
-  "theme.font.name": "JetBrainsMono Nerd Font",
-  "theme.font.label": "JetBrainsMono Nerd Font",
-  "theme.bar.opacity": 80,
-  "theme.bar.buttons.opacity": 100,
-  "theme.bar.buttons.monochrome": false,
-  "theme.bar.floating": false,
-  "bar.autoHide": "fullscreen",
-  "theme.bar.buttons.enableBorders": false,
-  "bar.launcher.autoDetectIcon": false,
-  "bar.workspaces.showWsIcons": true,
-  "bar.workspaces.showApplicationIcons": true,
-  "theme.bar.buttons.background_opacity": 0,
-  "theme.bar.buttons.background_hover_opacity": 75
+  "theme.bar.menus.menu.volume.slider.primary": "#00bfff"
 }

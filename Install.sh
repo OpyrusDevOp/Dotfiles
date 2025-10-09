@@ -48,7 +48,11 @@ Installation "AppLauncher" fuzzel
 
 Installation "Widget Manager" eww
 
-# Installation "Dock" waybar
+Installation "Fetch" fastfetch
+
+Installation "Search Tools" fzf
+
+Installation_Yay "Media Player" jellyfin-media-player
 
 Installation_Yay "Dock" ags-hyprpanel-git
 
