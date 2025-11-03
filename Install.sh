@@ -42,7 +42,7 @@ Installation "Neovim" neovim
 
 Installation "Shell" fish
 
-Installation "Browser" firefox
+Installation_Yay "Browser" zen-browser-bin
 
 Installation "AppLauncher" fuzzel
 
