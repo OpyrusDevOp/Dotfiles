@@ -21,8 +21,10 @@ Installing_Message() {
   echo "Installing $1 ..."
 }
 
-echo "####  App Installation  ####"
+echo "####   System Update   ####"
+sudo pacman -Syu
 
+echo "####  App Installation  ####"
 Installation "git" git
 
 echo "Install Neovim Config ..."
@@ -52,11 +54,17 @@ Installation "Fetch" fastfetch
 
 Installation "Search Tools" fzf
 
+Installation "Search Tools" fd
+
+Installation_Yay "Jetbrains Toolbox" jetbrains-toolbox
+
 Installation_Yay "Media Player" jellyfin-media-player
 
 Installation_Yay "Dock" ags-hyprpanel-git
 
 Installation "Wallpaper daemon" hyprpaper
+
+Installation "Wallpaper daemon" swww
 
 Installation "Screenshot App" hyprshot
 
@@ -66,7 +74,11 @@ Installation "Terminal Session Manager" zellij
 
 Installation "Discord" discord
 
+Installation "Blender" blender
+
 Installation "Obsidian" obsidian
+
+Installation "Mail Client" thunderbird
 
 Installation "Office suite" libreoffice
 
@@ -78,6 +90,8 @@ Installation "Bluetooth Control" "bluez bluez-utils"
 
 Installation "Brightness Control" brightnessctl
 
+Installation "Copy" rsync
+
 Installation "Audio Control" wireplumber
 
 Install_Dotnet
@@ -88,6 +102,7 @@ curl -fsSL https://bun.sh/install | bash
 Installation_Yay "Nvm" nvm
 
 echo "#### Configuration ####"
-mkdir -p ~/{Documents,Musics,Pictures,Projects/{Softwares,Games},Videos}
+mkdir -p ~/{Documents,Musics,Pictures,Programs,Projects/{Softwares,Games},Videos}
 sudo mkdir -p /usr/local/share/fonts/{otf,ttf}
 sudo unzip ./JetBrainsMono.zip -d /usr/local/share/fonts/ttf/
+sudo unzip ./catppuccin-mocha.zip -d /usr/share/sddm/themes/

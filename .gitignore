@@ -3,7 +3,9 @@
 !.gitignore
 !README.md
 !Install.sh
+!sddm.conf
 !JetBrainsMono.zip
+!catppuccin-mocha.zip
 
 !waybar/
 !waybar/**
