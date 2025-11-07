@@ -246,6 +246,10 @@ setup_configuration() {
     if [[ -f "./catppuccin-mocha.zip" ]]; then
         print_info "Installing Catppuccin SDDM theme..."
         sudo mkdir -p /usr/share/sddm/themes/
+        sudo unzip ./catppuccin-mocha.zip /usr/share/sddm/themes/ 
+        sudo rsync ./sddm.conf /etc/sddm.conf.d/
+
+    chsh -s /usr/bin/fish
         
 
 #------------------------------------------------------------------------------

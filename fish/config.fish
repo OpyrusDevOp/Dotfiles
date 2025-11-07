@@ -6,22 +6,17 @@ function zj -a session
     zellij attach $session
 end
 
-function start_ssh_agent
-    for line in (keychain --eval ~/.ssh/id_ed25519)
-        if string match -qr '^([A-Z_]+)=' -- $line
-            set var (string split '=' (string split ';' $line)[1])[1]
-            set val (string split '=' (string split ';' $line)[1])[2]
-            set -gx $var $val
-        end
-    end
-end
-
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    # keychain --eval /home/opyrusdev/.ssh/id_ed25519 | source
+    # Initialize keychain for SSH key management
+    # This will prompt for password once per session and cache it
+    if type -q keychain
+        eval (keychain --eval --quiet --agents ssh id_ed25519)
+    end
 
-    start_ssh_agent
+    # Initialize NVM
     nvm use default
+
+    # Clear screen and show system info
     clear
     fastfetch
 end
