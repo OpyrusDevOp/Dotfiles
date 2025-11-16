@@ -5,7 +5,7 @@
 # Description: Automated installation and configuration script
 #==============================================================================
 
-set -e  # Exit on error
+set -euo pipefail  # Exit on error
 
 #------------------------------------------------------------------------------
 # Configuration Variables
@@ -14,7 +14,7 @@ readonly DOTNET_INSTALL_URL="https://dot.net/v1/dotnet-install.sh"
 readonly BUN_INSTALL_URL="https://bun.sh/install"
 readonly NEOVIM_CONFIG_REPO="https://github.com/OpyrusDevOp/Neovim-Config.git"
 readonly YAY_REPO="https://aur.archlinux.org/yay.git"
-readonly SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 #------------------------------------------------------------------------------
 # Utility Functions
 #------------------------------------------------------------------------------
@@ -255,26 +255,16 @@ setup_configuration() {
 #------------------------------------------------------------------------------
 # Main Execution
 #------------------------------------------------------------------------------
-
 main() {
-    print_header "Arch Linux Setup Script"
-    print_info "Starting system setup..."
-    
-    # Check if running as root
-    if [[ $EUID -eq 0 ]]; then
-        print_error "This script should not be run as root"
-        exit 1
-    fi
-    
-    # Execute setup steps
+    echo "Starting Arch setup – you must be a normal user!"
+    [[ $EUID -eq 0 ]] && { echo "Run as regular user, not root."; exit 1; }
+
     update_system
     install_packages
+    sync_config_files 
     setup_configuration
-    
-    print_header "Setup Complete"
-    print_info "System setup completed successfully!"
-    print_info "Please restart your system for all changes to take effect."
-    print_info "Don't forget to change your default shell: chsh -s /usr/bin/fish"
+
+    echo "All done! Reboot Now Buddy"
 }
 
 # Run main function
