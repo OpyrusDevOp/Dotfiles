@@ -14,7 +14,7 @@ readonly DOTNET_INSTALL_URL="https://dot.net/v1/dotnet-install.sh"
 readonly BUN_INSTALL_URL="https://bun.sh/install"
 readonly NEOVIM_CONFIG_REPO="https://github.com/OpyrusDevOp/Neovim-Config.git"
 readonly YAY_REPO="https://aur.archlinux.org/yay.git"
-
+readonly SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 #------------------------------------------------------------------------------
 # Utility Functions
 #------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ install_pacman() {
     local package="$2"
     
     display_install_msg "$description"
-    sudo pacman -S --noconfirm --needed "$package" || {
+    sudo pacman -S --noconfirm --needed $package || {
         print_error "Failed to install $description"
         return 1
     }
@@ -59,7 +59,7 @@ install_yay() {
     local package="$2"
     
     display_install_msg "$description"
-    yay -S --noconfirm --needed "$package" || {
+    yay -S --noconfirm --needed $package || {
         print_error "Failed to install $description"
         return 1
     }
@@ -189,7 +189,7 @@ install_packages() {
 
 # Sync configuration files
 sync_config_files() {
-    local source_config="./config"
+    local source_config="$SCRIPT_DIR"
     local dest_config="$HOME/.config"
     
     if [[ ! -d "$source_config" ]]; then
@@ -234,23 +234,23 @@ setup_configuration() {
     sudo mkdir -p /usr/local/share/fonts/{otf,ttf}
     
     # Install fonts if zip files exist
-    if [[ -f "./JetBrainsMono.zip" ]]; then
+    if [[ -e "$SCRIPT_DIR/JetBrainsMono.zip" ]]; then
         print_info "Installing JetBrains Mono fonts..."
         sudo unzip -o ./JetBrainsMono.zip -d /usr/local/share/fonts/ttf/
         fc-cache -f
     else
-        print_error "JetBrainsMono.zip not found in current directory"
+        print_error "JetBrainsMono.zip not found in $SCRIPT_DIR"
     fi
     
     # Install SDDM theme if zip exists
-    if [[ -f "./catppuccin-mocha.zip" ]]; then
+    if [[ -e "$SCRIPT_DIR/catppuccin-mocha.zip" ]]; then
         print_info "Installing Catppuccin SDDM theme..."
         sudo mkdir -p /usr/share/sddm/themes/
-        sudo unzip ./catppuccin-mocha.zip /usr/share/sddm/themes/ 
-        sudo rsync ./sddm.conf /etc/sddm.conf.d/
-
+        sudo unzip $SCRIPT_DIR/catppuccin-mocha.zip /usr/share/sddm/themes/ 
+    fi
+    sudo rsync $SCRIPT_DIR/sddm.conf /etc/sddm.conf.d/
     chsh -s /usr/bin/fish
-        
+}   
 
 #------------------------------------------------------------------------------
 # Main Execution
