@@ -213,7 +213,7 @@ sync_config_files() {
                 --exclude='.git' \
                 --exclude='.gitignore' \
                 --exclude='.gitmodules' \
-                "$config_dir" "$dest_config/"
+                "${config_dir%/}" "$dest_config/"
         fi
     done
     
@@ -246,9 +246,10 @@ setup_configuration() {
     if [[ -e "$SCRIPT_DIR/catppuccin-mocha.zip" ]]; then
         print_info "Installing Catppuccin SDDM theme..."
         sudo mkdir -p /usr/share/sddm/themes/
-        sudo unzip $SCRIPT_DIR/catppuccin-mocha.zip /usr/share/sddm/themes/ 
+        sudo unzip -o "$SCRIPT_DIR/catppuccin-mocha.zip" -d /usr/share/sddm/themes/ 
     fi
-    sudo rsync $SCRIPT_DIR/sddm.conf /etc/sddm.conf.d/
+    sudo mkdir -p /etc/sddm.conf.d/
+    sudo rsync "$SCRIPT_DIR/sddm.conf" /etc/sddm.conf.d/
     chsh -s /usr/bin/fish
 }   
 
