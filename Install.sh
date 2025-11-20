@@ -146,11 +146,11 @@ install_packages() {
     install_yay "Zen Browser" "zen-browser-bin"
     
     # Hyprland ecosystem
-    install_pacman "Fuzzel Launcher" "fuzzel"
-    install_pacman "EWW Widget Manager" "eww"
-    install_pacman "Hyprpaper" "hyprpaper"
-    install_pacman "SWWW Wallpaper Daemon" "swww"
-    install_pacman "Hyprshot Screenshot" "hyprshot"
+    install_yay "Fuzzel Launcher" "fuzzel"
+    install_yay "EWW Widget Manager" "eww"
+    install_yay "Hyprpaper" "hyprpaper"
+    install_yay "SWWW Wallpaper Daemon" "swww"
+    install_yay "Hyprshot Screenshot" "hyprshot"
     install_yay "AGS Hyprpanel" "ags-hyprpanel-git"
     
     # Development tools
@@ -158,29 +158,29 @@ install_packages() {
     install_yay "NVM (Node Version Manager)" "nvm"
     
     # Utilities
-    install_pacman "Fastfetch" "fastfetch"
-    install_pacman "FZF Fuzzy Finder" "fzf"
-    install_pacman "FD Find Tool" "fd"
-    install_pacman "Yazi File Manager" "yazi"
-    install_pacman "Zellij Session Manager" "zellij"
-    install_pacman "Unzip" "unzip"
-    install_pacman "Keychain" "keychain"
-    install_pacman "Rsync" "rsync"
+    install_yay "Fastfetch" "fastfetch"
+    install_yay "FZF Fuzzy Finder" "fzf"
+    install_yay "FD Find Tool" "fd"
+    install_yay "Yazi File Manager" "yazi"
+    install_yay "Zellij Session Manager" "zellij"
+    install_yay "Unzip" "unzip"
+    install_yay "Keychain" "keychain"
+    install_yay "Rsync" "rsync"
     
     # Media & Communication
     install_yay "Jellyfin Media Player" "jellyfin-media-player"
-    install_pacman "Discord" "discord"
-    install_pacman "Thunderbird Mail" "thunderbird"
+    install_yay "Discord" "discord"
+    install_yay "Thunderbird Mail" "thunderbird"
     
     # Productivity
-    install_pacman "Blender" "blender"
-    install_pacman "Obsidian" "obsidian"
-    install_pacman "LibreOffice" "libreoffice"
+    install_yay "Blender" "blender"
+    install_yay "Obsidian" "obsidian"
+    install_yay "LibreOffice" "libreoffice"
     
     # System control
-    install_pacman "Bluetooth (Bluez)" "bluez bluez-utils"
-    install_pacman "Brightness Control" "brightnessctl"
-    install_pacman "Audio (Wireplumber)" "wireplumber"
+    install_yay "Bluetooth (Bluez)" "bluez bluez-utils"
+    install_yay "Brightness Control" "brightnessctl"
+    install_yay "Audio (Wireplumber)" "wireplumber"
     
     # Runtimes
     install_dotnet
