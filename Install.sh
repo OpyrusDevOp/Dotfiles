@@ -236,7 +236,7 @@ setup_configuration() {
     # Install fonts if zip files exist
     if [[ -e "$SCRIPT_DIR/JetBrainsMono.zip" ]]; then
         print_info "Installing JetBrains Mono fonts..."
-        sudo unzip -o ./JetBrainsMono.zip -d /usr/local/share/fonts/ttf/
+        sudo unzip -o "$SCRIPT_DIR/JetBrainsMono.zip" -d /usr/local/share/fonts/ttf/
         fc-cache -f
     else
         print_error "JetBrainsMono.zip not found in $SCRIPT_DIR"
@@ -258,6 +258,7 @@ setup_configuration() {
 #------------------------------------------------------------------------------
 main() {
     echo "Starting Arch setup – you must be a normal user!"
+    print_info "Script directory: $SCRIPT_DIR"
     [[ $EUID -eq 0 ]] && { echo "Run as regular user, not root."; exit 1; }
 
     update_system
