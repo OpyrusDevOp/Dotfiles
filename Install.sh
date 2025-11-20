@@ -168,7 +168,7 @@ install_packages() {
     install_yay "Rsync" "rsync"
     
     # Media & Communication
-    install_yay "Jellyfin Media Player" "jellyfin-media-player"
+    install_yay "Jellyfin client" "supersonic-desktop-wayland"
     install_yay "Discord" "discord"
     install_yay "Thunderbird Mail" "thunderbird"
     
