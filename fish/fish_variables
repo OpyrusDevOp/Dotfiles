@@ -1,10 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR CLAUDE_CODE_OAUTH_TOKEN:sk\x2dant\x2doat01\x2d_AErr1d3GyEv8ddk2sEPioCB3x1H7Eo1Reu4Y7n\x2dc6qBIk62R\x2dg70aAXuc7JQ5_0_PUV8nLP_N27B0p1lpWBKg\x2dadEBagAA
 SETUVAR --export DOTNET_ROOT:/home/opyrusdev/\x2edotnet
 SETUVAR EDITOR:nvim
 SETUVAR --export GEMINI_API_KEY:AIzaSyDXpEaLyLnu8C3_WM5pVwgHih6muIQ8oWA
-SETUVAR --export SSH_AGENT_PID:2078
-SETUVAR --export SSH_AUTH_SOCK:/home/opyrusdev/\x2essh/agent/s\x2et9jCKDEd70\x2eagent\x2eWIACn2nemh
+SETUVAR --export SSH_AGENT_PID:2081
+SETUVAR --export SSH_AUTH_SOCK:/home/opyrusdev/\x2essh/agent/s\x2et9jCKDEd70\x2eagent\x2enBfR4iU4wK
 SETUVAR SSH_KEYS_TO_AUTOLOAD:/home/opyrusdev/\x2essh/id_ed25519\x1e/home/opyrusdev/\x2essh/id_ed25519
 SETUVAR __fish_initialized:4300
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
@@ -12,7 +13,7 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_plugins:edc/bass\x1ejorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_user_paths:/home/opyrusdev/\x2elocal/bin\x1e/home/opyrusdev/\x2edotnet\x1e/home/opyrusdev/development/flutter/bin\x1e/home/opyrusdev/Programs/omnisharp\x1e/home/opyrusdev/Android/Sdk/emulator\x1e/home/opyrusdev/Android/Sdk/platform\x2dtools
+SETUVAR fish_user_paths:/home/opyrusdev/\x2elocal/bin\x1e/home/opyrusdev/\x2edotnet\x1e/home/opyrusdev/development/flutter/bin\x1e/home/opyrusdev/Programs/omnisharp\x1e/home/opyrusdev/Android/Sdk/emulator\x1e/home/opyrusdev/Android/Sdk/platform\x2dtools\x1e/home/opyrusdev/\x2edotnet/tools
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute
