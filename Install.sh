@@ -152,6 +152,7 @@ install_packages() {
   install_yay "SWWW Wallpaper Daemon" "swww"
   install_yay "Hyprshot Screenshot" "hyprshot"
   install_yay "AGS Hyprpanel" "ags-hyprpanel-git"
+  install_yay "Hyprland Polkit Agent" "hyprpolkitagent"
 
   # Development tools
   install_yay "JetBrains Toolbox" "jetbrains-toolbox"
